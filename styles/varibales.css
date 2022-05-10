@@ -1,0 +1,8 @@
+:root{
+        --text-color: rgb(231, 231, 231);
+        --text-bottom-shadow: 1px 9px 0 rgb(0, 0, 0);
+        --text-shadow: 10px 10px 20px #333;
+        --font-size: 30px;
+        --side-bar-color: rgb(195, 178, 93);
+        --button-background: rgba(78, 83, 160, 0.351);
+}

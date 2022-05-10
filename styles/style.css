@@ -1,0 +1,375 @@
+/* basic layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  cursor: url(../images/utilities/cursor.cur), auto;
+  height: 100vh;
+}
+/* header */
+#header {
+  text-align: center;
+  font-family: wonderbar;
+  font-size: 3rem;
+  color: var(--text-color);
+  text-shadow: var(--text-bottom-shadow);
+}
+
+body {
+  background: url(../images/utilities/fortnite-background.png) no-repeat center
+    center/cover;
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+/* sidebar */
+.side-bar-container {
+  height: 38rem;
+  width: 15rem;
+  padding: 20px;
+  border-radius: 10px;
+  left: 90px;
+  font-family: "game";
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    357deg,
+    rgba(34, 193, 195, 0.5163107479319853),
+    rgba(253, 187, 45, 0.5891398795846463)
+  );
+  text-shadow: var(--text-shadow);
+  color: var(--text-color);
+  font-size: var(--font-size);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  position: relative;
+}
+.side-guesses {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  font-size: 20px;
+}
+.btn-new-game button {
+  width: 160px;
+  height: 160px;
+  border-radius: 100px;
+  border: none;
+  font-size: 30px;
+  background-color: rgba(93, 93, 93, 0.711);
+  transition: 0.1s;
+}
+.btn-new-game button:hover {
+  width: 140px;
+  height: 130px;
+  background-color: rgba(78, 83, 160, 0.351);
+}
+span {
+  margin-bottom: 40px;
+}
+/* game section */
+.game-wrapp {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+/* cards section */
+.grid {
+  grid-gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 10s;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flipped-card {
+  background: url(../images/cards/flipped-back-card.png) no-repeat center
+    center/cover;
+  height: 12.6rem;
+  width: 10.5rem;
+  transition: 0.8s;
+  transform: rotateY(180deg);
+}
+.ace {
+  background: url(../images/cards/one-card.jpg) no-repeat center center/cover;
+  height: 12.6rem;
+  width: 10.5rem;
+  box-shadow: 10px 20px 20px rgba(82, 82, 82, 0.73);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.queen {
+  background: url(../images/cards/queen.jpg) no-repeat center center/cover;
+  height: 12.6rem;
+  width: 10.5rem;
+  box-shadow: 10px 20px 30px rgba(82, 82, 82, 0.73);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.prince {
+  background: url(../images/cards/prince.jpg) no-repeat center center/cover;
+  height: 12.6rem;
+  width: 10.5rem;
+  box-shadow: 10px 20px 30px rgba(82, 82, 82, 0.73);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.ten {
+  background: url(../images/cards/ten.jpg) no-repeat center center/cover;
+  height: 12.6rem;
+  width: 10.5rem;
+  box-shadow: 10px 20px 30px rgba(82, 82, 82, 0.73);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.seven {
+  background: url(../images/cards/seven.jpg) no-repeat center center/cover;
+  height: 12.6rem;
+  width: 10.5rem;
+  box-shadow: 10px 20px 30px rgba(82, 82, 82, 0.73);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.two {
+  background: url(../images/cards/two-card.jpg) no-repeat center center/cover;
+  height: 12.6rem;
+  width: 10.5rem;
+  box-shadow: 10px 20px 30px rgba(82, 82, 82, 0.73);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+@media (max-width: 1500px) {
+  .side-bar-container {
+    width: 11rem;
+    font-size: 20px;
+    text-shadow: 15px 15px 30px #333;
+    margin-left: 35px;
+  }
+  .btn-new-game button {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 1400px) {
+  body {
+    background: url(../images/utilities/fortnite-background-vertical.png)
+      no-repeat center center/cover;
+  }
+  .side-bar-container {
+    height: 16rem;
+    width: 50rem;
+    margin-top: 30px;
+    margin-right: 200px;
+    flex-direction: row;
+  }
+  .game-wrapp {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+  }
+  .btn-new-game button {
+    width: 120px;
+    height: 120px;
+    font-size: 20px;
+  }
+  .timer {
+    margin: 70px 50px 0 0;
+  }
+}
+@media (max-width: 920px) {
+  .side-bar-container {
+    height: 10rem;
+    width: 50rem;
+    margin-top: 30px;
+    margin-right: 200px;
+  }
+  .side-guesses {
+    line-height: 1.5;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+  }
+  .btn-new-game button {
+    margin-top: -10px;
+    font-size: 18px;
+  }
+  .timer {
+    font-size: 20px;
+    display: flex;
+  }
+}
+
+@media (max-width: 800px) {
+  .timer {
+    display: flex;
+    font-size: 30px;
+    margin-left: 70px;
+  }
+  .flipped-card {
+    height: 9.5rem;
+    width: 8rem;
+  }
+  .ace {
+    height: 9.5rem;
+    width: 8rem;
+  }
+  .two {
+    height: 9.5rem;
+    width: 8rem;
+  }
+  .queen {
+    height: 9.5rem;
+    width: 8rem;
+  }
+  .prince {
+    height: 9.5rem;
+    width: 8rem;
+  }
+  .ten {
+    height: 9.5rem;
+    width: 8rem;
+  }
+  .seven {
+    height: 9.5rem;
+    width: 8rem;
+  }
+}
+
+@media (max-width: 670px) {
+  html {
+    height: 105vh;
+  }
+  .btn-new-game button {
+    margin-top: -3px;
+  }
+  .timer {
+    margin-top: -10px;
+    margin-right: 90px;
+  }
+  .flipped-card {
+    height: 7rem;
+    width: 5rem;
+  }
+  .ace {
+    height: 7rem;
+    width: 5rem;
+  }
+  .two {
+    height: 7rem;
+    width: 5rem;
+  }
+  .queen {
+    height: 7rem;
+    width: 5rem;
+  }
+  .prince {
+    height: 7rem;
+    width: 5rem;
+  }
+  .ten {
+    height: 7rem;
+    width: 5rem;
+  }
+
+  .seven {
+    height: 7rem;
+    width: 5rem;
+  }
+}
+
+@media (max-width: 590px) {
+  .side-guesses {
+    line-height: 1.5;
+    display: block;
+    font-size: 15px;
+  }
+
+  .timer {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 505px) {
+  html {
+    height: 120vh;
+  }
+  .side-guesses {
+    padding: 10px;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    height: 130vh;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .side-guesses {
+    padding: 10px;
+    margin-left: 70px;
+  }
+  .btn-new-game button {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 440px) {
+  html {
+    height: 140vh;
+  }
+  .side-bar-container {
+    display: block;
+    height: 20rem;
+    width: 20rem;
+  }
+  .side-guesses {
+    margin-right: 50px;
+    padding: 5px;
+  }
+  .btn-new-game button {
+    margin-top: -20px;
+    margin-left: 50px;
+    font-size: 18px;
+  }
+  .timer {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 100px;
+  }
+}
+@media (max-width: 380px) {
+  html {
+    height: 150vh;
+  }
+  .game-wrapp {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-content: space-around;
+    justify-content: space-around;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .side-bar-container {
+    margin-top: 10px;
+    height: 20rem;
+    width: 20rem;
+  }
+
+  button {
+    margin-top: -40px;
+  }
+}

@@ -1,0 +1,14 @@
+
+@font-face {
+        font-family: "wonderbar";
+        src: url("../fonts/Wonderbar-pALD.ttf") format("OpenType");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+@font-face {
+        font-family: "game";
+        src: url("../fonts/PressStart2P-Regular.ttf") format("OpenType");
+        font-weight: normal;
+        font-style: normal;
+      }
