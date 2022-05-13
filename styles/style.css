@@ -347,9 +347,9 @@ span {
     margin-left: 100px;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 400px) {
   html {
-    height: 150vh;
+    height: 100vh;
   }
   .game-wrapp {
     display: flex;
@@ -360,16 +360,64 @@ span {
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
   .side-bar-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
     margin-top: 10px;
-    height: 20rem;
-    width: 20rem;
+    height: 16.5rem;
+    width: 15rem;
+    justify-content:center;
+    align-items: center;
+  }
+  .btn-new-game button{
+    height: 3rem;
+    width: 4rem;
+    border-radius: 100px;
+    
+  }
+  .flipped-card{
+    height: 5rem !important;
+    width: 5rem !important;
   }
 
-  button {
-    margin-top: -40px;
+  .btn-new-game button:hover {
+    height: 3.2rem;
+    width: 4.2rem;
   }
+
+  .ace {
+    height: 5rem;
+    width: 5rem;
+  }
+  .two {
+    height: 5rem;
+    width: 5rem;
+  }
+  .queen {
+    height: 5rem;
+    width: 5rem;
+  }
+  .prince {
+    height: 5rem;
+    width: 5rem;
+  }
+  .ten {
+    height: 5rem;
+    width: 5rem;
+  }
+  .seven {
+    height: 5rem;
+    width: 5rem;
+  }
+  
+
+  /* button {
+    margin-top: -40px;
+  } */
 }
+
+
